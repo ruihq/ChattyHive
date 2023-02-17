@@ -1,0 +1,21 @@
+name: Deploy react app to Github Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: cd chattyhive-web && npm install
+      - name: Build
+        run: cd chattyhive-web && npm run build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: main
+          folder: client/build
