@@ -1,12 +1,14 @@
-// Add this to index.js
+// ADD THIS TO index.js
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ChattingSite from './ChattingSite';
+import ChattyHive from './ChattyHive';
+import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChattingSite />
+    <ChattyHive />
   </React.StrictMode>,
   document.getElementById('root')
 );
